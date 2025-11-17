@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int convert (){
+	int list[30];
+	int a;
+	int b=0;
+	int c;
+	int count=0;
+	int num=1;
+	int len=0;
+	cout<<"Enter number 2 to calculate!"<<endl;
+	while(len<30){
+		cout<<"Enter binary digit:";
+		cin>>a;
+		if (a==2){
+			break;
+		}else{
+			list[len]=a;
+			len+=1;
+		}
+	}
+	while (count<len){
+			int c;
+			c=(list[count])*pow(2,(len-num));
+			
+			b+=c;
+			cout<<c<<" + "<<endl;
+			//cout<<count<<":"<<num<<":len:"<<len<<endl;
+			count+=1;
+			num+=1;
+	}
+	cout<<b;
+}
+int main(){
+		convert();
+}
+		
+	
