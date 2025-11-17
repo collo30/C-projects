@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Reverse{
+	int num;
+	int new_num;
+	public:
+	Reverse(int num=0,int new_num=0){
+		this->num=num;
+		this->new_num=new_num;
+	}
+	int  reverse();
+};
+int  Reverse::reverse(){
+	cout<<"Enter number you want to reverse: ";
+	cin>>num;
+	while (num>0){
+		new_num*=10;
+		new_num+=num%10;
+		//new_num*=10;
+		num=num/10;
+	}
+	//cout<<new_num;
+	cout<<"Your number reversed:"<<new_num;
+     return 0;
+}
+
+int main(){
+	Reverse *r=new Reverse;
+	r->reverse();
+	return 0;
